@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quote</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <style>
+        *{
+            font-family:'Poppins','Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+           color: rgb(11, 81, 110);
+        }
+        body{
+            background:linear-gradient(to right, #ff9966, #ff5e62);
+        }
+        button{
+            padding:0.8rem 1rem;
+            margin:0.5rem 1.5rem;
+            background-color:rgb(16, 110, 150,0.8);
+            border:none;
+            border-radius:10px;
+            color:white;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-size:1rem;
+            
+        }
+        button:hover{
+            background: rgb(16, 110, 150);
+            color:white ;
+            cursor: pointer;
+        }
+        button:focus{
+            outline: none;
+           
+        }
+        #main{
+            text-align: center;
+            margin:2rem;
+            padding: 2rem;
+            background-color: white;
+            color: rgb(224, 136, 4);
+        }
+        h2{
+            text-align:right;
+            font-family: 'Lucida Grande';
+        }
+
+    </style>
+    <script type="text/javascript" >
+    window.onload=()=>{
+    const generateQuote=()=>{
+        fetch("https://api.quotable.io/random")
+        .then(response=> response.json())
+        .then(re=> {
+            quote.innerText=re.content;
+            author.innerText="-"+re.author ;
+
+        })
+    }
+    generateQuote();
+
+    var a=document.getElementById("batn");
+    var quote=document.querySelector(".quote");
+    var author=document.querySelector("h2");
+       a.addEventListener("click",()=>{
+           generateQuote();
+       }
+       )
+    }
+    </script>
+</head>
+<body>
+    <div id="main">
+        <h1 class="quote"></h1>
+         <h2></h2>
+        <button id="batn">Click for new one</button>
+    </div>
+    
+</body>
+</html>
