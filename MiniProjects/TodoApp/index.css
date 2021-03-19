@@ -1,0 +1,95 @@
+body{
+    background:linear-gradient(to right, #ff9966, #ff5e62);
+    font-family: poppins;
+    color: white;
+    text-align: center;
+}
+button {
+    background-color: white;
+    border: none;
+    
+} 
+.in i{
+    color:red;
+    font-size:2.5rem;
+    transform:translateX(30deg)
+}
+.in input{
+    height: 2.5rem;
+    width: 20rem;
+    border: none;
+    font-size:1.2rem;
+    color: rgb(5, 0, 82);
+
+}
+form{
+    display: flex;
+    justify-content: center;
+}
+
+.in i:hover{
+    cursor: pointer;
+   
+}
+.line{
+    list-style: none;
+    background-color: rgba(255, 255,255,0.6);
+    color:red;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+   margin: 1.5rem;
+   padding: 0px;
+   border-radius: 10px;
+   height: 3.5rem;
+}
+.line i{
+    font-size:1.5rem;
+    color: rgba(255, 0,0,0.6);
+
+}
+h3{
+    flex: 1;
+    text-align: start;
+    margin-left: 0.8rem;
+    font-size: 1.5rem;
+}
+.line i:hover{
+    cursor: pointer;
+}
+
+input :focus,button:focus,select:focus{
+    outline: none;
+}
+
+
+/* select styling */
+
+select{
+    background:rgb(22, 146, 248);
+    color: white;
+    width: 9rem;
+    border: none;
+    appearance:none;
+    padding:0.57rem;
+    font-size: large;
+}
+.box{
+    padding-left: 1rem;
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.box:after{
+    position: absolute;
+    content: "";
+    top: 14px;
+    right: 10px;
+    border: 6px solid transparent;
+    border-color: #fff transparent transparent transparent;
+
+}
+.box:hover:after{
+    background-color:rgba(22, 146, 248,0.7) ;
+}
+
+/
