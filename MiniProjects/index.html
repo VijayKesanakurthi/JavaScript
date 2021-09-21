@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo</title>
+    <script src="index.js"></script>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+
+
+</head>
+<body style="font-family: 'Poppins','Courier New', Courier, monospace;" class="bg-gradient-to-r from-red-200 via-red-300 to-yellow-200 text-white">
+    <div class="flex flex-col justify-evenly
+    items-center ">
+        <div class=" header mt-12">
+            <h1 class="text-4xl">
+                ToDo List
+            </h1>
+
+        </div>
+        <form class=" flex mt-11 mb-11  sm:m-11  justify-center ">
+            
+            <input id="in" class="p-2  border border-transparent  rounded-lg  focus:ring-red-400 focus:border-transparent focus:outline-none focus:ring-2  tracking-wide text-red-400 placeholder-red-300 focus:placeholder-opacity-30 w-3/5
+            sm:w-full" placeholder="Enter ToDo">
+            <button type="submit"  id="butt" class="group border hover:bg-red-300  bg-red-200 rounded-lg   flex items-center ml-2 p-2">
+             Add
+            <span class="material-icons hover:scale-110 transition duration-500 ease-in-out transform  hover:rotate-0 scale-75  -rotate-90" >
+                arrow_downward
+            </span>
+            </button>
+        </form>
+        <div class=" ">
+            <ul class="lis">
+             
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
+
